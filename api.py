@@ -30,18 +30,18 @@ def parse_tech_pack():
     )
     db.session.add(new_product)
 
+    size_units = tech_pack["size_units"]
     for size, val in tech_pack["sizes"].items():
         new_size = Size(
             size=size,
-            size_units=tech_pack["size_units"],
-            product_name=tech_pack["name"],
-            middle_hip=val["middle_hip"],
-            waist_girth=val["waist_girth"],
-            waist_height=val["waist_height"],
-            inside_leg_length=val["inside_leg_length"],
-            thigh_girth=val["thigh_girth"],
-            knee_girth=val["knee_girth"],
-            crotch_length=val["crotch_length"],
+            product_name=Size.convert_to_cm(size_units, tech_pack["name"]),
+            middle_hip=Size.convert_to_cm(size_units, val["middle_hip"]),
+            waist_girth=Size.convert_to_cm(size_units, val["waist_girth"]),
+            waist_height=Size.convert_to_cm(size_units, val["waist_height"]),
+            inside_leg_length=Size.convert_to_cm(size_units, val["inside_leg_length"]),
+            thigh_girth=Size.convert_to_cm(size_units, val["thigh_girth"]),
+            knee_girth=Size.convert_to_cm(size_units, val["knee_girth"]),
+            crotch_length=Size.convert_to_cm(size_units, val["crotch_length"]),
         )
         db.session.add(new_size)
 

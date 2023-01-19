@@ -22,7 +22,6 @@ class Size(db.Model):
     def __int__(
         self,
         size,
-        size_units,
         product_name,
         height=None,
         hip_girth=None,
@@ -37,15 +36,15 @@ class Size(db.Model):
 
         self.size = size
         self.product_name = product_name
-        self.height = self.convert_to_cm(size_units, height)
-        self.hip_girth = self.convert_to_cm(size_units, hip_girth)
-        self.middle_hip = self.convert_to_cm(size_units, middle_hip)
-        self.waist_girth = self.convert_to_cm(size_units, waist_girth)
-        self.waist_height = self.convert_to_cm(size_units, waist_height)
-        self.inside_leg_length = self.convert_to_cm(size_units, inside_leg_length)
-        self.thigh_girth = self.convert_to_cm(size_units, thigh_girth)
-        self.crotch_length = self.convert_to_cm(size_units, crotch_length)
-        self.knee_girth = self.convert_to_cm(size_units, knee_girth)
+        self.height = height
+        self.hip_girth = hip_girth
+        self.middle_hip = middle_hip
+        self.waist_girth = waist_girth
+        self.waist_height = waist_height
+        self.inside_leg_length = inside_leg_length
+        self.thigh_girth = thigh_girth
+        self.crotch_length = crotch_length
+        self.knee_girth = knee_girth
 
     @staticmethod
     def convert_to_cm(size_units, measurement_val):
