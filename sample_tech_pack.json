@@ -1,0 +1,52 @@
+{
+  "name": "Chino Template",
+  "style_no": "B21A104",
+  "description": "Pull On Elastic Waist Pant",
+  "division": "Mens",
+  "category": "Chino",
+  "season": "Fall/Winter",
+  "year": "2022",
+  "price": "50",
+  "manufacturer_name": "test",
+  "manufacturer_email": "test",
+  "manufacturer_location": "test",
+  "size_units": "imperial",
+  "sizes": {
+    "28": {
+      "middle_hip": 38,
+      "waist_girth": 30.5,
+      "waist_height": 1.5,
+      "inside_leg_length": 31,
+      "thigh_girth": 22,
+      "knee_girth": 15,
+      "crotch_length": 7.75
+    },
+    "29": {
+      "middle_hip": 39,
+      "waist_girth": 31.5,
+      "waist_height": 2.5,
+      "inside_leg_length": 32,
+      "thigh_girth": 23,
+      "crotch_length": 8.75,
+      "knee_girth": 16
+    },
+    "30": {
+      "middle_hip": 40,
+      "waist_girth": 32.5,
+      "waist_height": 3.5,
+      "inside_leg_length": 33,
+      "thigh_girth": 24,
+      "crotch_length": 9.75,
+      "knee_girth": 17
+    }
+  },
+  "tolerances": {
+    "middle_hip": 0.5,
+    "waist_girth": 0.5,
+    "waist_height": 0,
+    "inside_leg_length": 0.375,
+    "thigh_girth": 0.25,
+    "crotch_length": 0.25,
+    "knee_girth": 0.125
+  }
+}
