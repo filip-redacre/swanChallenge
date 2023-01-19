@@ -34,7 +34,7 @@ def parse_tech_pack():
     for size, val in tech_pack["sizes"].items():
         new_size = Size(
             size=size,
-            product_name=Size.convert_to_cm(size_units, tech_pack["name"]),
+            product_name=tech_pack["name"],
             middle_hip=Size.convert_to_cm(size_units, val["middle_hip"]),
             waist_girth=Size.convert_to_cm(size_units, val["waist_girth"]),
             waist_height=Size.convert_to_cm(size_units, val["waist_height"]),
